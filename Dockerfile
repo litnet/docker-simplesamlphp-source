@@ -1,6 +1,6 @@
 FROM debian:jessie-slim
 
-ENV SSP_VERSION="1.14.12"
+ENV SSP_VERSION="1.14.16"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
