@@ -3,6 +3,8 @@
 SSP_DIR="simplesamlphp"
 CUSTOM_DIR="simplesamlphp.d"
 
+WWW_USER_ID=${WWW_USER_ID: -82}
+
 function traverse () {
     for file in `ls $1`
     do
@@ -22,5 +24,7 @@ function traverse () {
 }
 
 traverse "/${CUSTOM_DIR}"
+
+chown -R ${WWW_USER_ID}.${WWW_USER_ID} "/${CUSTOM_DIR}"
 
 /bin/bash
